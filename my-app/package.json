@@ -23,7 +23,7 @@
     "test": "react-scripts test",
     "eject": "react-scripts eject",
     "netlify-serve":"npm install -g serve && serve -s build",
-    "netlify-postbuild":" npm install netlify-cli -g && netlify deploy "
+    "netlify-postbuild":"npm install netlify-cli -g && netlify deploy"
   },
   "eslintConfig": {
     "extends": [
