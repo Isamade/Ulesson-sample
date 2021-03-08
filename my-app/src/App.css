@@ -1,0 +1,331 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit; 
+}
+
+html {
+  font-size: 62.5%; 
+}
+
+@media only screen and (max-width: 75em) {
+  html {
+    font-size: 56.25%; 
+  } 
+}
+@media only screen and (max-width: 56.25em) {
+  html {
+    font-size: 50%; 
+  } 
+}
+@media only screen and (min-width: 112.5em) {
+  html {
+    font-size: 75%;
+  } 
+}
+
+body {
+  box-sizing: border-box; 
+  background-color: #E5E5E5;
+  font-family: 'Muli', DM sans;
+}
+
+.m-1 {
+  margin-top: 3rem;
+}
+
+h1 {
+  font-family: 'Itim';
+  font-size: 4.8rem;
+  font-weight: normal;
+}
+
+h2 {
+  font-size: 3.3rem;
+  font-family: 'Itim';
+  margin-top: 4rem;
+  margin-bottom: 2rem;
+}
+
+h3 {
+  font-size: 2.8rem;
+  font-family: 'Itim';
+}
+
+h5 {
+  font-family: 'Muli';
+  font-size: 2.4rem;
+  font-weight: bold;
+}
+
+h6 {
+  font-family: 'Muli';
+  font-size: 1.8rem;
+}
+
+button {
+  color: black;
+  border-color: transparent;
+  outline: none;
+}
+
+button:focus {
+  outline: none;
+}
+
+.flex-justify {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.flex-align {
+  align-items: center;
+}
+
+.my-container {
+  width: 118rem;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.main-rel {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.main-rel > img:nth-child(1) {
+  position: absolute;
+  z-index: -1;
+  top: -7rem;
+}
+
+.main-rel > img:nth-child(2) {
+  position: absolute;
+  z-index: -2;
+  right: 0;
+  bottom: 0;
+}
+
+.my-navbar {
+  background-color: #313848;
+  width: 100%;
+  padding: 1.5rem;
+}
+
+.my-navbar span:nth-child(1) {
+  margin-left: 3.5rem;
+}
+
+.my-navbar span:nth-child(2) {
+  margin-right: 6.5rem;
+}
+
+.my-navbar-username {
+  font-size: 1.8rem;
+  line-height: 2rem;
+  color: rgba(255, 255, 255, 0.4);
+  margin-left: 1.2rem;
+}
+
+.dashboard-subjects {
+  padding-top: 4rem;
+  padding-bottom: 3.5rem;
+  display: flex;
+  overflow-x: auto;
+  justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+.dashboard-subject {
+  margin: 1rem 0.5rem;
+}
+
+.dashboard-subject img {
+  width: 20rem;
+  height: 10rem;
+}
+
+.dashboard-btn {
+  background-color: #EA7052;
+  color: #FFFFFF;
+  width: 9.8rem;
+  height: 3.3rem;
+  border-radius: 0.7rem;
+  margin-left: 2rem;
+}
+
+.dashboard-topics {
+  flex-wrap: wrap;
+}
+
+.dashboard-topic {
+  position: relative;
+  width: 26.5rem;
+  height: 28rem;
+  margin: 1rem 0.5rem;
+}
+
+.dashboard-topic > img {
+  width: 100%;
+}
+
+.topic-subject {
+  margin: 0.5rem 0;
+}
+
+.topic-name {
+  font-family: 'Muli';
+  font-weight: bold;
+  margin-top: 0.5rem;
+  margin-bottom: 0rem;
+  width: 22rem;
+}
+
+.topic-button {
+  position: absolute;
+  top: 20%;
+  left: 0%;
+  height: 6rem;
+  width: 6rem;
+}
+
+@media (max-width: 67em) {
+  .my-container {
+    width: 75vw;
+  }
+  .dashboard-subjects {
+    justify-content: space-evenly;
+  }
+}
+
+@media (max-width: 40em) {
+  .my-container {
+    width: 100vw;
+  }
+  .my-navbar-username {
+    display: none;
+  }
+  .dashboard-topics {
+    justify-content: space-around;
+  }
+  .my-navbar span:nth-child(2) {
+    margin-right: 2.5rem;
+  }
+  .main-rel > img:nth-child(1) {
+    left: -5rem;
+  }
+}
+
+.chapter-lessons {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  flex-wrap: wrap;
+}
+
+.chapter-lesson {
+  margin: 1rem 1rem;
+}
+
+.chapter-lesson img {
+  height: 21rem;
+  width: 19rem;
+}
+
+.player-details {
+ display: flex;
+ justify-content: center;
+}
+
+.details-content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.player-video {
+  display: flex;
+  justify-content: center;
+  padding: 3rem;
+}
+
+.player-btn {
+  color: #FFFFFF;
+  width: 20rem;
+  height: 4rem;
+  background-size: cover;
+  border-radius: 0.8rem;
+}
+
+.video {
+  width: 80%;
+}
+
+@media (max-width: 67em){
+  .video {
+    width: 90%;
+  }
+}
+
+.main-rel2 {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.main-rel2 > img:nth-child(1) {
+  position: absolute;
+  top: 3rem;
+  left: 4rem;
+}
+
+.main-rel2 > img:nth-child(2) {
+  position: absolute;
+  z-index: -1;
+  height: 50rem;
+  width: 18rem;
+  top: -10rem;
+  right: 8rem;
+}
+
+.main-rel3 {
+  position: relative;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+.main-rel3 > img:nth-child(1) {
+  position: absolute;
+  top: 3rem;
+  left: 10rem;
+}
+
+.main-rel3 > img:nth-child(2) {
+  position: absolute;
+  z-index: -1;
+  height: 45rem;
+  width: 90rem;
+  top: 0rem;
+  right: 0rem;
+}
+
+.main-rel2 > img:nth-child(1):hover {
+  cursor: pointer;
+}
+
+.main-rel3 > img:nth-child(1):hover {
+  cursor: pointer;
+}
+
+@media (max-width: 41em) {
+  .main-rel2 > img:nth-child(1) {
+    left: 2rem;
+  }
+  .main-rel3 > img:nth-child(1) {
+    left: 2rem;
+  }
+}
