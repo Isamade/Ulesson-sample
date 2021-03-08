@@ -43,7 +43,7 @@ const VideoPlayer = ({subjects, match}) => {
             <img src={toprockBackground} alt=''/>
             <div className='my-container'>
                 <div className="player-video">
-                    {subject ?(<video className="video" controls loop preload="auto">
+                    {subject ? (<video className="video" controls key={lesson.id}>
                         <source src={subject && lesson.media_url} type="video/mp4"/>
                         Your browser does not support the video tag.
                     </video>) : <h4>Loading...</h4>}
