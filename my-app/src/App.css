@@ -263,6 +263,7 @@ button:focus {
 
 .video {
   width: 80%;
+  max-height: 50rem;
 }
 
 @media (max-width: 67em){
