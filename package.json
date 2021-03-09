@@ -5,7 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "netlify-postbuild":"npm install -g serve --prefix my-app && serve -s build --prefix my-app"
+    "netlify-serve":"npm install -g serve --prefix my-app && serve -s build --prefix my-app"
   },
   "repository": {
     "type": "git",
