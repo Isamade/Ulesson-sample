@@ -1,7 +1,6 @@
 import React, { Fragment, useEffect } from 'react';
 import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 import Routes from './components/routing/Routes';
-import NotFound from './components/layout/NotFound';
 
 // Redux
 import { Provider } from 'react-redux';
@@ -21,7 +20,6 @@ const App = () => {
         <Fragment>
           <Switch>
             <Route component={Routes} />
-            <Route component={NotFound} />
           </Switch>
         </Fragment>
       </Router>

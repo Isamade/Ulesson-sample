@@ -1,4 +1,4 @@
-import React from 'react';
+import React, {useEffect, useRef} from 'react';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import PropTypes from 'prop-types';
@@ -37,13 +37,23 @@ const VideoPlayer = ({subjects, match}) => {
     else if (((lessonIndex + 1) === lessonLength) && ((chapterIndex + 1) < chapterLength)){
         myredirect = `/video-player/${parseInt(match.params.subject)}/${subject.chapters[chapterIndex+1].id}/${subject.chapters[chapterIndex+1].lessons[0].id}`;
     };
+
+    const videoRef = useRef();
+    const previousUrl = useRef(myredirect);
+  
+    useEffect(() => {
+      if (previousUrl.current !== myredirect && videoRef.current) {
+        videoRef.current.load();
+        previousUrl.current = myredirect;
+      }
+    }, [myredirect]);
     return (
         <main className='main-rel3'>
             <img src={backArrow} alt='' onClick={onClick}/>
             <img src={toprockBackground} alt=''/>
             <div className='my-container'>
                 <div className="player-video">
-                    {subject ? (<video className="video" controls key={lesson.id}>
+                    {subject ? (<video className="video" controls ref={videoRef}>
                         <source src={subject && lesson.media_url} type="video/mp4"/>
                         Your browser does not support the video tag.
                     </video>) : <h4>Loading...</h4>}
